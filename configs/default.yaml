@@ -1,0 +1,23 @@
+# sage-realtime-health-surveillance configuration
+data:
+  sage_lake_bucket: "s3://imacs-mm-foundation-data-prod"
+  sage_lake_prefix: "sage-lake/observations"
+  cache_dir: "/mnt/data/sage-realtime-health-surveillance/cache"
+
+model:
+  architecture: "transformer"
+  hidden_dim: 512
+  num_layers: 8
+  num_heads: 8
+  dropout: 0.1
+
+training:
+  batch_size: 64
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  max_epochs: 100
+  mixed_precision: true
+
+evaluation:
+  metrics: ["rmse", "mae", "r2", "auroc", "f1"]
+  eval_interval: 500
