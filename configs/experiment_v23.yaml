@@ -1,0 +1,20 @@
+# experiment_v23 configuration v2
+experiment:
+  name: "experiment_v23_experiment"
+  version: 2
+  seed: 44
+
+data:
+  sage_table: "sage_lake.observations"
+  batch_size: 64
+  num_workers: 4
+
+model:
+  hidden_dim: 256
+  num_layers: 4
+  dropout: 0.2
+
+training:
+  lr: 2.0e-04
+  epochs: 50
+  gradient_clip: 1.0
