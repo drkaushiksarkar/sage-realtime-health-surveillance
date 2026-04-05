@@ -17,4 +17,4 @@ jobs:
       - name: Lint
         run: pip install ruff && ruff check src/ tests/ || true
       - name: Test
-        run: pip install pytest && pytest tests/ -v --tb=short || true
+        run: python -m pytest
